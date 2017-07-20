@@ -57,7 +57,7 @@ My pipeline consisted of 10 steps:
 
 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating lines with positive and negative slopes. Then, I could make two linear interpolations, one for positive slopes and one for negative slopes (left and right lanes, respectively).
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating lines with positive and negative slopes. Also, I only considered abs(slope) greater than a threshold to discard noise. Then, I could make two linear interpolations, one for positive slopes and one for negative slopes (left and right lanes, respectively).
 
 
 
@@ -65,13 +65,13 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when the car makes abrupt turns. The low-pass filter can create a significant delay on the system.
+- When the car makes abrupt turns, the low-pass filter can create a significant delay on the system.
 
-Another shortcoming would be what would happen when the car is driving in roads that has different line colors. This algorithm may not work properly, since it only "highlights" white and yellow lines.
+- When the car is driving on roads that has different line colors, this algorithm may not work properly, since it only "highlights" white and yellow lines.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to find other ways to mask the lines on the street.
+- A possible improvement would be to find other ways to mask the lines on the street.
 
-Another potential improvement could be to find another way to filter out the high frequency noise.
+- Another potential improvement could be to find another way to filter out the high frequency noise.
