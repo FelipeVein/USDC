@@ -1,11 +1,4 @@
 
-**Finding Lane Lines on the Road**
-
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
 [//]: # (Image References)
 
 [image1]: /test_images_output2/1masked.jpg "Mask - Yellow and White"
@@ -23,39 +16,39 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 10 steps: 
 
-1- Mask the yellow and white colors in the image, and weight the result with the original image.
+**1- Mask the yellow and white colors in the image, and weight the result with the original image.
 
 ![alt text][image1]
 
 
-2- Convert the result image to grayscale.
+**2- Convert the result image to grayscale.
 
 ![alt text][image2]
 
 
-3- Blur.
+**3- Blur.
 
 ![alt text][image3]
 
 
-4- Use Canny Edge Detection.
+**4- Use Canny Edge Detection.
 
 ![alt text][image4]
 
 
-5- Mask the Region of Interest
+**5- Mask the Region of Interest
 
 ![alt text][image5]
 
-6- Use the Hough Transform to find lines from Canny Edges
+**6- Use the Hough Transform to find lines from Canny Edges
 
-7- Separate lines with positive and negative slopes.
+**7- Separate lines with positive and negative slopes.
 
-8- Find two linear interpolations, one for positive slopes and one for negative slopes.
+**8- Find two linear interpolations, one for positive slopes and one for negative slopes.
 
-9- Use a simple low-pass filter to filter out the high frequency noise (only video).
+**9- Use a simple low-pass filter to filter out the high frequency noise (only video).
 
-10- The result:
+**10- The result:
 
 ![alt text][image6]
 
