@@ -8,12 +8,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./test_images_output2/1masked.jpg "Mask - Yellow and White"
-[image2]: ./test_images_output2/2gray.jpg "Grayscale"
-[image3]: ./test_images_output2/3blurgray.jpg "Blurred Grayscale"
-[image4]: ./test_images_output2/4edges.jpg "Edges"
-[image5]: ./test_images_output2/5edgeswithmaskedregion.jpg "Masked Region"
-[image6]: ./test_images_output2/6final.jpg "Result"
+[image1]: /test_images_output2/1masked.jpg "Mask - Yellow and White"
+[image2]: /test_images_output2/2gray.jpg "Grayscale"
+[image3]: /test_images_output2/3blurgray.jpg "Blurred Grayscale"
+[image4]: /test_images_output2/4edges.jpg "Edges"
+[image5]: /test_images_output2/5edgeswithmaskedregion.jpg "Masked Region"
+[image6]: /test_images_output2/6final.jpg "Result"
 
 ---
 
