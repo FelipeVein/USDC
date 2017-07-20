@@ -59,6 +59,7 @@ My pipeline consisted of 10 steps:
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating lines with positive and negative slopes. Also, I only considered abs(slope) greater than a threshold to discard noise. Then, I could make two linear interpolations, one for positive slopes and one for negative slopes (left and right lanes, respectively).
 
+The first and ninth steps in my pipeline were developed to make the algorithm more robust. Only after using these the algorithm worked on the Challenge video.
 
 
 
