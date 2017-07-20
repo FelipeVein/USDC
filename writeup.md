@@ -65,7 +65,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when the car makes abrupt turns. The low-pass filter can create a significant delay on the algorithm.
+One potential shortcoming would be what would happen when the car makes abrupt turns. The low-pass filter can create a significant delay on the system.
 
 Another shortcoming would be what would happen when the car is driving in roads that has different line colors. This algorithm may not work properly, since it only "highlights" white and yellow lines.
 
