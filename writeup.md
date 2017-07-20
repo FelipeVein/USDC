@@ -21,25 +21,62 @@ The goals / steps of this project are the following:
 
 ### 1. Basic pipeline
 
-My pipeline consisted of 6 steps. First, I masked the yellow and white colors in the image, and weighted the result with the original image. Then, I converted the images to grayscale. With this 
+My pipeline consisted of 10 steps: 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+1- Mask the yellow and white colors in the image, and weight the result with the original image.
 
 ![alt text][image1]
+
+
+2- Convert the result image to grayscale.
+
+![alt text][image2]
+
+
+3- Blur.
+
+![alt text][image3]
+
+
+4- Use Canny Edge Detection.
+
+![alt text][image4]
+
+
+5- Mask the Region of Interest
+
+![alt text][image5]
+
+6- Use the Hough Transform to find lines from Canny Edges
+
+7- Separate lines with positive and negative slopes.
+
+8- Find two linear interpolations, one for positive slopes and one for negative slopes.
+
+9- Use a simple low-pass filter to filter out the high frequency noise (only video).
+
+10- The result:
+
+![alt text][image6]
+
+
+
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by separating lines with positive and negative slopes. Then, I could make two linear interpolations, one for positive slopes and one for negative slopes (left and right lanes, respectively).
+
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+One potential shortcoming would be what would happen when the car makes abrupt turns. The low-pass filter can create a significant delay on the system.
 
-Another shortcoming could be ...
+Another shortcoming would be what would happen when the car is driving in roads that has different line colors. This algorithm may not work properly, since it only "highlights" white and yellow lines.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to find other ways to mask the lines on the street.
 
-Another potential improvement could be to ...
+Another potential improvement could be to find another way to filter out the high frequency noise.
